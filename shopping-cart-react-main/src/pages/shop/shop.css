@@ -1,0 +1,170 @@
+/* Shop styles */
+
+.shopTitle {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.products {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  place-items: center;
+  padding: 20px;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.product {
+  position: relative;
+  border-radius: 15px;
+  width: 100%; 
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  background-color: white;
+}
+
+.product:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+.product img {
+  width: 100%;
+  max-height: 70%;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.product .description {
+  padding: 20px;
+  text-align: center;
+}
+
+.addToCartBttn {
+  margin-top: 10px; /* Add margin top to create space */
+  background-color: transparent;
+  border: 2px solid rgb(19, 19, 19);
+  min-width: 100px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.addToCartBttn:hover {
+  background-color: rgb(19, 19, 19);
+  color: white;
+}
+
+.product .amount {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-bottom: 10px; /* Add margin bottom to create space */
+}
+
+/* Contact section styles */
+
+.contact-section {
+  padding: 50px 20px; /* Add padding for spacing around the section */
+  background-color: #f9f9f9; /* Light background color for contrast */
+  text-align: center;
+}
+
+.contact-section h2 {
+  margin-bottom: 20px; /* Space between the title and the paragraph */
+  font-size: 36px; /* Increase font size for the title */
+  color: #333; /* Darker color for the title */
+}
+
+.contact-section p {
+  margin-bottom: 30px; /* Space between the paragraph and the form */
+  font-size: 18px; /* Increase font size for better readability */
+  color: #666; /* Softer color for the paragraph */
+}
+
+.contact-form {
+  max-width: 600px; /* Limit the width of the form */
+  margin: 0 auto; /* Center the form */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between form elements */
+}
+
+.contact-form label {
+  font-size: 16px; /* Increase font size for labels */
+  color: #333; /* Darker color for labels */
+  text-align: left; /* Align labels to the left */
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%; /* Full width for input and textarea */
+  padding: 10px; /* Padding inside input and textarea */
+  border: 1px solid #ccc; /* Border for input and textarea */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size for input and textarea */
+}
+
+.contact-form textarea {
+  height: 150px; /* Height for the textarea */
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.contact-form button {
+  padding: 10px 20px; /* Padding inside the button */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #333; /* Button background color */
+  color: white; /* Button text color */
+  font-size: 16px; /* Font size for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Transition for background color */
+}
+
+.contact-form button:hover {
+  background-color: #555; /* Darker background color on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .product {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .shopTitle {
+    font-size: 32px;
+  }
+
+  .product img {
+    max-height: 60%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+}
